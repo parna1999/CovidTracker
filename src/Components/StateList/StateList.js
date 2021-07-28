@@ -9,12 +9,12 @@ function StateList(params) {
 	};
 	let data = params.data;
 	return data[0] ? (
-		<div className='list-wrapper'>
+		<div className='state-list-wrapper'>
 			{data.map((item, index) => {
 				if (index) {
 					return (
 						<Link to={`/india/${item}`} style={navStyle}>
-							<div className='list-item'>{item}</div>
+							<div className='state-list-item'>{item}</div>
 						</Link>
 					);
 				}
@@ -22,9 +22,8 @@ function StateList(params) {
 			})}
 		</div>
 	) : (
-		<div style={{color:"white"}}>
-			Loading...{" "}
-			
+		<div className="wrapper">
+			<div className = "movingBox"></div>
 		</div>
 	);
 }
